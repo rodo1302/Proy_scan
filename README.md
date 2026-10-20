@@ -543,7 +543,7 @@ No se detectan:
 Esta opción es para equipos Windows que solo necesitan ejecutar la aplicación.
 No hace falta instalar Python, `pip` ni las dependencias del proyecto.
 
-1. Descarga `Relevo_Patrimonio_v1.exe` desde las [Releases de GitHub](https://github.com/suministros362/Proy_Scan_Patrimonio/releases). Si tienes una copia del proyecto, también puedes usar `dist/Relevo_Patrimonio_v1.exe`.
+1. Descarga `Relevo_Patrimonio_v1.exe` desde las [Releases de GitHub](https://github.com/rodo1302/Proy_scan/releases). Si tienes una copia del proyecto, también puedes usar `dist/Relevo_Patrimonio_v1.exe`.
 2. Guarda el ejecutable en una carpeta local y ábrelo con doble clic. El paquete ya incluye el archivo maestro de inventario y las plantillas; la aplicación queda lista para usar sin una carga inicial.
 3. Define un sector y comienza a escanear con el inventario incluido.
 4. Para actualizar el inventario, pulsa **Subir listado** y selecciona un archivo `.xlsx` que cumpla las columnas obligatorias descritas en [Contrato del Excel maestro](#8-base-de-datos). La aplicación valida el esquema, reemplaza el maestro y confirma cuántos bienes cargó.
@@ -565,7 +565,7 @@ Requisitos mínimos: Windows y permiso para ejecutar el archivo. No es necesario
 En CMD, ejecuta:
 
 ```bat
-git clone https://github.com/suministros362/Proy_Scan_Patrimonio.git relevo-patrimonio
+git clone https://github.com/rodo1302/Proy_scan.git relevo-patrimonio
 cd relevo-patrimonio
 ```
 
