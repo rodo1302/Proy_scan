@@ -77,18 +77,18 @@ Las funcionalidades identificadas en el código son las siguientes:
 
 ### Frameworks y librerías
 
-| Dependencia | Uso identificado |
-| --- | --- |
-| `ttkbootstrap` | Interfaz gráfica de escritorio moderna y temas visuales para Tkinter. |
-| `pandas` | Lectura y escritura de archivos Excel, manipulación de DataFrame. |
-| `openpyxl` | Lectura/escritura de archivos `.xlsx` para plantillas de relevamiento. |
-| `xlrd` | Lectura de archivos Excel `.xls` de plantilla de búsqueda. |
-| `xlutils` | Copia y modificación de libros `.xls` para la planilla de búsqueda masiva. |
-| `xlwt` | Soporte de generación de archivos `.xls` en la lógica de plantillas. |
-| `PyInstaller` | Empaquetado del proyecto como ejecutable `.exe` mediante `Relevo_Patrimonio.spec`. |
-| `Pillow` | Presente en dependencias; no se observa uso directo en el código fuente. |
-| `darkdetect` | Dependencia presente; no se observa uso directo explícito en el código fuente. |
-| `numpy` | Dependencia de `pandas` y ecosistema de Excel; no se usa directamente en la lógica principal. |
+| Dependencia    | Uso identificado                                                                              |
+| -------------- | --------------------------------------------------------------------------------------------- |
+| `ttkbootstrap` | Interfaz gráfica de escritorio moderna y temas visuales para Tkinter.                         |
+| `pandas`       | Lectura y escritura de archivos Excel, manipulación de DataFrame.                             |
+| `openpyxl`     | Lectura/escritura de archivos `.xlsx` para plantillas de relevamiento.                        |
+| `xlrd`         | Lectura de archivos Excel `.xls` de plantilla de búsqueda.                                    |
+| `xlutils`      | Copia y modificación de libros `.xls` para la planilla de búsqueda masiva.                    |
+| `xlwt`         | Soporte de generación de archivos `.xls` en la lógica de plantillas.                          |
+| `PyInstaller`  | Empaquetado del proyecto como ejecutable `.exe` mediante `Relevo_Patrimonio.spec`.            |
+| `Pillow`       | Presente en dependencias; no se observa uso directo en el código fuente.                      |
+| `darkdetect`   | Dependencia presente; no se observa uso directo explícito en el código fuente.                |
+| `numpy`        | Dependencia de `pandas` y ecosistema de Excel; no se usa directamente en la lógica principal. |
 
 ### Base de datos
 
@@ -597,6 +597,14 @@ pip install -r requirements-dev.txt
 python app.py
 ```
 
+### Compilación del Ejecutable (.exe)
+
+Desde la raíz del repositorio, con el entorno virtual activado y las dependencias instaladas, ejecuta:
+
+```bash
+pyinstaller --noconsole --onefile --name "Relevo_Patrimonio_v1" --icon="assets/icono.ico" --collect-all ttkbootstrap --add-data "plantillas;plantillas" --add-data "archivos;archivos" --add-data "assets;assets" app.py
+```
+
 ### Ejecutar pruebas y lint
 
 Desde la raíz del repositorio:
@@ -715,28 +723,28 @@ No se detectan jobs programados, cron, workers, microservicios o automatizacione
 
 ## 20. Dependencias
 
-| Dependencia | Uso |
-| --- | --- |
-| `altgraph` | Dependencia de PyInstaller / empaquetado. |
-| `darkdetect` | Dependencia presente; no se observa uso directo en la lógica de la app. |
-| `et_xmlfile` | Soporte de lectura/escritura de Excel `.xlsx` en `openpyxl`. |
-| `numpy` | Soporte de `pandas` y manejo de matrices/Series. |
-| `openpyxl` | Lectura/escritura de plantillas Excel `.xlsx`. |
-| `packaging` | Dependencia de entorno/instalación. |
-| `pandas` | Lectura/escritura de inventario y exportación de datos. |
-| `pefile` | Utilidad del proceso de empaquetado de PyInstaller. |
-| `pillow` | Presente en dependencias; no se observa uso claro en la app. |
-| `pyinstaller` | Generación del ejecutable. |
-| `pyinstaller-hooks-contrib` | Extensión para PyInstaller. |
-| `python-dateutil` | Dependencia de `pandas`. |
-| `pywin32-ctypes` | Requisito para empaquetado en Windows. |
-| `setuptools` | Herramienta de instalación / empaquetado. |
-| `six` | Dependencia de `xlrd` y otros paquetes. |
-| `ttkbootstrap` | Interfaz gráfica de escritorio. |
-| `tzdata` | Dependencia de fechas/uso de timezone. |
-| `xlrd` | Lectura de archivos `.xls`. |
-| `xlutils` | Manipulación de archivos `.xls` para la búsqueda masiva. |
-| `xlwt` | Generación de hoja `.xls` de compatibilidad. |
+| Dependencia                 | Uso                                                                     |
+| --------------------------- | ----------------------------------------------------------------------- |
+| `altgraph`                  | Dependencia de PyInstaller / empaquetado.                               |
+| `darkdetect`                | Dependencia presente; no se observa uso directo en la lógica de la app. |
+| `et_xmlfile`                | Soporte de lectura/escritura de Excel `.xlsx` en `openpyxl`.            |
+| `numpy`                     | Soporte de `pandas` y manejo de matrices/Series.                        |
+| `openpyxl`                  | Lectura/escritura de plantillas Excel `.xlsx`.                          |
+| `packaging`                 | Dependencia de entorno/instalación.                                     |
+| `pandas`                    | Lectura/escritura de inventario y exportación de datos.                 |
+| `pefile`                    | Utilidad del proceso de empaquetado de PyInstaller.                     |
+| `pillow`                    | Presente en dependencias; no se observa uso claro en la app.            |
+| `pyinstaller`               | Generación del ejecutable.                                              |
+| `pyinstaller-hooks-contrib` | Extensión para PyInstaller.                                             |
+| `python-dateutil`           | Dependencia de `pandas`.                                                |
+| `pywin32-ctypes`            | Requisito para empaquetado en Windows.                                  |
+| `setuptools`                | Herramienta de instalación / empaquetado.                               |
+| `six`                       | Dependencia de `xlrd` y otros paquetes.                                 |
+| `ttkbootstrap`              | Interfaz gráfica de escritorio.                                         |
+| `tzdata`                    | Dependencia de fechas/uso de timezone.                                  |
+| `xlrd`                      | Lectura de archivos `.xls`.                                             |
+| `xlutils`                   | Manipulación de archivos `.xls` para la búsqueda masiva.                |
+| `xlwt`                      | Generación de hoja `.xls` de compatibilidad.                            |
 
 ---
 
